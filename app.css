@@ -1,0 +1,74 @@
+.code {
+    font-family: monospace;
+}
+
+.calendar {
+    width: 350px;
+    text-align: center;
+background-color: aquamarine;
+border-radius: 10%;
+margin-left: 20px;
+}
+
+.calendar-header {
+    font-size: 1.1em;
+}
+.calendar-header > .nav {
+    cursor: pointer;
+}
+.calendar-header > .label {
+    flex: auto;
+}
+
+.calendar-weekdays {
+    border-bottom: 2px solid #BBBDBF;
+}
+
+.calendar-weekdays > span,
+.calendar-dates > .date {
+    display: inline-block;
+    margin-bottom: 2px;
+    padding: 0.3em 0;
+height: 28px;
+border-radius:50%;
+}
+
+.calendar-weekdays > span{
+    width: 14.2857%;	 /*100% / 7 */
+
+}
+
+.calendar-dates > .date:not(.date-empty) {
+    cursor: pointer;
+}
+.calendar-dates > .date-today {
+    /* background-color:rgb(176 61 61); */
+border-bottom: 2px solid rgb(176 61 61);
+background: linear-gradient(transparent, rgb(176 61 61));
+
+
+}
+.calendar-dates > .date-selected {
+    margin-bottom: 0;
+    border-bottom: 2px solid #0077EF;
+}
+.calendar-dates > .date-selected,
+.calendar-dates > .date:not(.date-empty):hover {
+    background: linear-gradient(transparent, rgba(0, 119, 239, 0.2));
+}
+.calendar-dates {
+width: 100%;
+display: grid;
+text-align: center;
+grid-template-columns: calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7) calc(100% / 7);
+}
+  h4 {
+    margin: 0;
+  }
+
+
+  nav {
+padding: 20px;
+display: flex;
+justify-content: space-between;
+  }
